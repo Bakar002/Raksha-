@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./mediaQueries" as *;
+@mixin section-padding {
+  padding-inline: $app-padding-400;
+  padding-block: 4rem;
+  @include md {
+    padding-inline: $app-padding-500;
+  }
+  @include lg {
+    padding-inline: $app-padding-600;
+  }
+}
+
+// Class Definition using the Mixin
+.section-padding-class {
+  @include section-padding;
+}

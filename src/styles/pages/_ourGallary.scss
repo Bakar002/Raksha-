@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/mediaQueries" as *;
+.raksha-gallery {
+  @include section-padding;
+  padding-top: 8.5rem;
+  display: grid;
+  gap: 1rem;
+  img {
+    object-fit: cover;
+  }
+}

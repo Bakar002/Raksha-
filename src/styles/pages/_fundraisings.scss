@@ -1,0 +1,20 @@
+@use "../abstracts/mixin" as *;
+@use "../abstracts/variables" as *;
+.fundraising-posts {
+  @include section-padding;
+  padding-top: 7.4rem;
+  display: grid;
+  gap: 2rem;
+
+  .card {
+    max-width: 20rem;
+    border-radius: 1rem;
+    box-shadow: $box-shadow-400;
+    img {
+      box-shadow: $box-shadow-400;
+      border-radius: 1rem;
+      height: 15rem;
+      object-fit: cover;
+    }
+  }
+}

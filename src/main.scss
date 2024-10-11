@@ -1,0 +1,30 @@
+//Abstracts
+@use "./styles/abstracts/variables";
+@use "./styles/abstracts/mediaQueries";
+@use "./styles/abstracts/utilities";
+@use "./styles/abstracts/mixin";
+
+//base
+@use "./styles/base/reset";
+@use "./styles/base/typography";
+
+//Layout
+@use "./styles/layout/header";
+@use "./styles/layout/footer";
+
+// components
+@use "./styles/components/styledDropZone";
+@use "./styles/components/login_page";
+@use "./styles/components/applicationcard";
+@use "./styles/components/incident-case-card";
+@use "./styles/components/eventcard";
+//pages
+@use "./styles/pages/home";
+@use "./styles/pages/report-incident";
+@use "./styles/pages/register-ngo";
+@use "./styles/pages/ngo-management";
+@use "./styles/pages/profile";
+@use "./styles/pages/page_renderer";
+@use "./styles/pages/ourGallary";
+@use "./styles/pages/fundraisings";
+@use "./styles/pages/our_members";

@@ -1,0 +1,59 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/mediaQueries" as *;
+footer {
+  @include section-padding;
+  background-color: $clr-primary-400;
+  color: $clr-neutral-100;
+  display: grid;
+
+  gap: 1rem;
+  .links {
+    display: grid;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .contact {
+      display: grid;
+      gap: 0.5rem;
+    }
+    .quick-links,
+    .information,
+    .project-reports {
+      display: grid;
+    }
+    a {
+      color: $clr-neutral-100;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .extra-info {
+    display: grid;
+    gap: 1rem;
+    @include md {
+      display: flex;
+    }
+    justify-content: space-between;
+    align-items: center;
+    .org-info {
+      display: grid;
+      @include md {
+        display: flex;
+      }
+      gap: 0.3rem;
+      .logo {
+        max-width: 4rem;
+        max-height: 4rem;
+        border: 1px solid white;
+        border-radius: 100%;
+      }
+    }
+  }
+}

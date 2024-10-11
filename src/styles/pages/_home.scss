@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/mixin" as *;
+
+.home-page {
+  padding-top: 5.2rem;
+  @include md {
+    padding-top: 6.6rem;
+  }
+  .welcome {
+    @include section-padding;
+    display: grid;
+    gap: 2rem;
+    padding-block: 3rem;
+    align-items: center;
+    .how-it-works-card {
+      display: grid;
+      gap: 1rem;
+      max-width: 15rem;
+      border-radius: 1rem;
+      box-shadow: $box-shadow-400;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      position: relative;
+      padding: 1rem;
+    }
+  }
+  .fundraising-section {
+    background-color: black;
+    // padding-block: 5rem;
+    // padding-inline: 2rem;
+    @include section-padding;
+    // .slick-slide {
+    //   padding: 0 10px;
+    // }
+
+    .slick-slide img {
+      border-radius: 1rem;
+    }
+  }
+
+  .easy-reporting {
+    @include section-padding();
+    @include md {
+      display: grid;
+      align-items: center;
+    }
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h1 {
+      line-height: 1.2;
+      @media (max-width: 375px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    img {
+      border-radius: 0.5rem;
+      box-shadow: $box-shadow-400;
+      object-fit: cover;
+    }
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  .events-section {
+    padding-block: 5rem;
+    padding-inline: 2rem;
+    @include section-padding;
+  }
+  .testimonials {
+    @include section-padding;
+
+    .testimonial-card {
+      position: relative;
+      border-radius: 1rem;
+      display: grid;
+      box-shadow: $box-shadow-400;
+      padding: 1rem;
+      padding-top: 4rem;
+      text-align: center;
+      overflow: visible;
+      .interded-couma {
+        padding: 0.5rem;
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        position: absolute;
+        top: -3rem; /* Half the height of the image (to push it upward) */
+        left: 50%;
+        transform: translateX(-50%); /* Center the image horizontally */
+      }
+      .formateQuote {
+        position: absolute;
+        top: 1rem;
+        transform: translateX(-50%);
+      }
+      .formate-left {
+        left: 80%;
+      }
+      .formate-right {
+        left: 20%;
+      }
+      &:hover {
+        .formateQuote.formate-left {
+          transform: translateX(-50%) rotate(180deg) !important; /* Rotate left icon */
+        }
+
+        .formateQuote.formate-right {
+          transform: translateX(-50%) rotate(180deg) !important; /* Rotate right icon */
+        }
+      }
+    }
+  }
+  .cases-solved {
+    @include section-padding();
+    display: grid;
+    gap: 2rem;
+  }
+  .our-colloborators {
+    @include section-padding();
+    background-color: black;
+    display: grid;
+    gap: 2rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    p,
+    h1 {
+      color: $clr-neutral-100;
+    }
+  }
+  .track-animal-status-section {
+    @include section-padding;
+    background-color: black;
+    display: grid;
+    gap: 1rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    p,
+    h1 {
+      color: $clr-neutral-100;
+    }
+  }
+  .real-time-alerts {
+    @include section-padding();
+    display: grid;
+    gap: 1rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+  .carousel {
+    padding: 0;
+  }
+}

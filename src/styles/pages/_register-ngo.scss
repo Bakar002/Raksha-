@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/mixin" as *;
+.registration-container {
+  @include section-padding;
+  padding-top: 10rem;
+  h1 {
+    color: $clr-neutral-900;
+    text-align: center;
+    padding-block: 5rem;
+  }
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    .detials-inputs {
+      display: grid;
+      gap: 0.5rem;
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    gap: 1rem;
+
+    button {
+      grid-column: span 2;
+      max-width: none;
+    }
+  }
+}

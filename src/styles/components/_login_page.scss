@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mediaQueries" as *;
+.login-page-container,
+.signup-container {
+  display: grid;
+  height: 100vh;
+  margin-top: 4rem;
+  place-content: center;
+  .login-form,
+  .signup-form {
+    box-shadow: $box-shadow-400;
+    border-radius: 0.5rem;
+    padding: 0;
+    max-width: 30rem;
+    @media (min-width: 320px) {
+      padding: 1rem;
+    }
+  }
+}

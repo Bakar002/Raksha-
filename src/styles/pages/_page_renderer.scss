@@ -1,0 +1,127 @@
+@use "../abstracts/mixin" as *;
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/variables" as *;
+// _page-renderer.scss
+// Number of columns in the grid
+$grid-columns: 12;
+
+// Gutter width between columns
+$gutter-width: 1rem;
+
+// Container max-width
+$container-max-width: 1200px;
+
+// Breakpoints for responsiveness
+$breakpoints: (
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+.page-renderer {
+  padding-top: 5.3rem;
+
+  .donations-page {
+    display: grid;
+    .donation-statics {
+      display: grid;
+      place-content: center;
+      .container {
+        display: grid;
+        gap: 0.5rem;
+        border-radius: 1rem;
+        width: fit-content;
+        @include md {
+          display: flex;
+        }
+        box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+      }
+    }
+    .donations-content {
+      display: grid;
+      gap: 3rem;
+
+      @include md {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      padding-inline: 2rem;
+      .patient-page-content {
+        @include md {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  .bannerImage {
+    width: 100%;
+    @include md {
+      height: auto;
+    }
+  }
+  @include md {
+    padding-top: 7rem;
+  }
+  .ck-content {
+    @include section-padding;
+    padding-block: 2rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1rem;
+      box-shadow: 4px 4px 10px;
+    }
+
+    // Grid container
+    .container {
+      width: 100%;
+      max-width: $container-max-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+    }
+
+    // Grid row
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -$gutter-width;
+      margin-right: -$gutter-width;
+    }
+
+    // Column class for default (mobile-first)
+    .col {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    // Two-column layout on larger screens
+    @each $breakpoint, $width in $breakpoints {
+      @media (min-width: $width) {
+        .container {
+          max-width: $width;
+        }
+
+        .row {
+          .col {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

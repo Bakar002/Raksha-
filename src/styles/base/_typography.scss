@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: $fs-500;
+  font-weight: $fw-regular;
+  background-color: $clr-neutral-100;
+  color: $clr-neutral-900;
+}
+
+$font-size-h1: 3em; // Adjust as needed
+$font-size-h2: 2em; // Adjust as needed
+$font-size-h3: 1.5em; // Adjust as needed
+$font-size-h4: 1em; // Adjust as needed
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}

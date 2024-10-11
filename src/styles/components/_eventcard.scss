@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as *;
+
+.slick-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.event-card {
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $box-shadow-400;
+
+  // Hover state to show the join button
+  &:hover .join-button {
+    display: flex;
+  }
+
+  .image-title {
+    position: relative;
+    img {
+      box-shadow: $box-shadow-400;
+      border-radius: 1rem;
+      height: 15rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4); // Adjust the opacity as needed
+      z-index: 1; // Ensure the overlay is above the image but below the text
+      border-radius: 1rem;
+    }
+
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      z-index: 33;
+    }
+  }
+
+  .container {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    .time-date-slot {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .location {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .join-button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: "5px";
+    transform: translateX(-50%);
+    z-index: 10; // Ensure it appears above other content
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($clr-primary-400, 10%);
+    }
+  }
+}

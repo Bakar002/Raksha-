@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+.our-members {
+  @include section-padding;
+  padding-top: 9rem;
+
+  .MuiTypography-h4 {
+    color: #3acf50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .MuiTableCell-root {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .MuiTableRow-root {
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

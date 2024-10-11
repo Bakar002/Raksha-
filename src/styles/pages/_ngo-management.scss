@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/mixin" as *;
+.ngo-management-container {
+  @include section-padding;
+  display: grid;
+  gap: 4rem;
+
+  .new-case-container {
+    padding-top: 4rem;
+    .new-cases {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @include md {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .volunteer-management {
+    display: grid;
+    gap: 3rem;
+    .volunteer-register-form {
+      padding-top: 2rem;
+      .form {
+        display: grid;
+        @include md {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .form-group {
+          display: grid;
+        }
+      }
+    }
+  }
+}

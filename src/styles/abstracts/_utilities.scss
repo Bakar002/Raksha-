@@ -1,0 +1,149 @@
+@use "./variables" as *;
+@use "./mediaQueries" as *;
+
+// Additional utility classes can be added as needed
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.clr-primary-400 {
+  color: $clr-primary-400;
+}
+.text-center {
+  text-align: center;
+}
+.gap-400 {
+  gap: 1rem;
+}
+.gap-500 {
+  gap: 2rem;
+}
+
+// typography
+
+.fs-300 {
+  font-size: $fs-300;
+}
+.fs-400 {
+  font-size: $fs-400;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+.fs-600 {
+  font-size: $fs-600;
+}
+.fs-700 {
+  font-size: $fs-700;
+}
+.fs-800 {
+  font-size: $fs-800;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+.fw-md {
+  font-weight: $fw-medium;
+}
+.fw-bold {
+  font-weight: $fw-bold;
+}
+.box-shadow-400 {
+  box-shadow: $box-shadow-400;
+}
+.padding-400 {
+  padding: 1rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  max-width: max-content;
+  background-color: $clr-primary-400;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow-400;
+  color: $clr-neutral-100;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $clr-primary-500; // Darken the background color
+    transform: scale(1.05); // Slightly enlarge the button
+    box-shadow: $box-shadow-500; // Increase shadow for emphasis
+  }
+}
+.btn-outlined {
+  padding: 0.5rem 1rem;
+  max-width: max-content;
+  background-color: transparent; // No background color for the outlined button
+  border: 2px solid $clr-primary-400; // Border color matches the primary color
+  border-radius: 0.5rem;
+  color: $clr-primary-400; // Text color matches the primary color
+  box-shadow: $box-shadow-400;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $clr-primary-400; // Change background on hover
+    color: $clr-neutral-100; // Change text color to match the button
+    border-color: $clr-primary-500; // Darken the border color on hover
+    transform: scale(1.05); // Slightly enlarge the button
+    box-shadow: $box-shadow-500; // Increase shadow for emphasis
+  }
+}
+
+.padding-none {
+  padding: 0.2rem;
+}
+.radius-400 {
+  border-radius: 0.5rem;
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+}
+
+.location-images {
+  display: grid;
+  gap: 3rem;
+}
