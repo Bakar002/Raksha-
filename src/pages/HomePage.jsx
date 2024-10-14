@@ -20,7 +20,7 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <Helmet>
+      {/* <Helmet>
         <title>Raksha Animal - Rescue and Care for Injured Animals</title>
         <meta
           name="description"
@@ -45,7 +45,7 @@ function HomePage() {
         />
         <meta property="og:url" content="https://rakshaanimal.org/" />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="carousel">
         <CustomCarousel

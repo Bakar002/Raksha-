@@ -7,7 +7,7 @@ const useAxiosPrivate = () => {
   const navigate = useNavigate();
 
   const axiosPrivate = axios.create({
-    baseURL: "https://animal-resuce-backend-production.up.railway.app",
+    baseURL: "https://backend-raksha.onrender.com",
     headers: {
       "Content-Type": "application/json",
     },

@@ -40,7 +40,7 @@ const Gallery = () => {
   return (
 <>
     <Helmet>
-    <title>About Us - My Website Gallery</title>
+    <title>About Us- Gallery</title>
     <meta name="description" content="Learn more about us Gallery" />
     <meta property="og:title" content="About Us - My Gallery" />
     <meta property="og:description" content="Details about our website and services. and Gallery" />
